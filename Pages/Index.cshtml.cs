@@ -25,7 +25,10 @@ namespace MikePortfolio.Pages
                 "SEO Organic Marketing",
                 "Shopify Ecommerce",
                 "WordPress CMS",
-                "Portal/ Dashboard Development"
+                "Portal/ Dashboard Development",
+                "BlockChain Basics",
+                "AI Integration SAAS Solutions",
+                "Web3 Fundamentals"
             };
 
             // Backend Technologies
