@@ -1,0 +1,48 @@
+﻿@page
+@model MikePortfolio.Pages.ProjectsModel
+@{
+    ViewData["Title"] = "My Projects";
+}
+
+<!-- Projects Header -->
+<section class="hero-section bg-gradient py-5 mt-5">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold text-center mb-3">Project Portfolio</h1>
+        <p class="lead text-center mb-0">Showcasing my recent work and case studies</p>
+    </div>
+</section>
+
+<!-- Projects Grid -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            @foreach (var project in Model.Projects)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card card h-100 border-0 shadow-lg overflow-hidden">
+                        <div class="project-image">
+                            <img src="@project.ImageUrl" class="card-img-top" alt="@project.Title">
+                            <div class="project-overlay">
+                                <span class="badge bg-primary">@project.Category</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">@project.Title</h4>
+                            <p class="card-text text-muted">@project.Description</p>
+                            <div class="mb-3">
+                                <small class="text-muted">Technologies:</small>
+                                <p class="mb-0">@project.Technologies</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">@project.DateCreated.ToString("MMMM yyyy")</small>
+                                <a href="@project.LiveUrl" target="_blank" class="btn btn-outline-primary">
+                                    <i class="bi bi-box-arrow-up-right me-1"></i>View Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

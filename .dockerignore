@@ -1,0 +1,54 @@
+# .NET build artifacts
+**/bin/
+**/obj/
+
+# Docker artifacts
+**/.dockerignore
+**/Dockerfile
+**/docker-compose.yml
+
+# Visual Studio/VS Code artifacts
+**/.vs/
+**/.vscode/
+
+# User-specific files
+**/*.user
+**/*.suo
+
+# Test results
+**/TestResults/
+
+# NuGet packages
+**/*.nupkg
+**/packages/
+
+# Node.js
+**/node_modules/
+**/npm-debug.log
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# IDE specific
+**/.idea/
+**/*.swp
+**/*.swo
+
+# Logs
+**/logs/
+**/*.log
+
+# OS generated files
+**/.DS_Store
+**/Thumbs.db
+
+# Build output
+**/publish/
+**/out/
+
+# Secrets
+**/secrets.json

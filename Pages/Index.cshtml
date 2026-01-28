@@ -1,0 +1,126 @@
+﻿@page
+@model MikePortfolio.Pages.IndexModel
+@{
+    ViewData["Title"] = "Michael Mujabi - Senior Full-Stack Developer";
+}
+
+<!-- Hero Section -->
+<section class="hero-section bg-gradient py-5 mt-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-3">Michael Mujabi</h1>
+                <h2 class="text-primary mb-4">Senior ASP.NET Full-Stack Developer</h2>
+                <p class="lead mb-4">With over 8+ years of experience designing, developing, and deploying secure, scalable, and high-performance web applications.</p>
+                <div class="d-flex gap-3">
+                    <a href="/Projects" class="btn btn-primary btn-lg">View Projects</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="profile-image-container mx-auto">
+                    <img src="~/images/miko.png" alt="Michael Mujabi" class="img-fluid rounded-circle profile-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Competencies -->
+<section class="py-5 bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-5">Core Competencies</h2>
+        <div class="row g-4">
+            @foreach (var skill in Model.CoreCompetencies)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="competency-card p-4 rounded">
+                        <h5 class="mb-3">@skill</h5>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Technical Skills -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Technical Expertise</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary"><i class="bi bi-server me-2"></i>Backend</h4>
+                        <ul class="list-unstyled">
+                            @foreach (var tech in Model.BackendTechnologies)
+                            {
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>@tech</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary"><i class="bi bi-window me-2"></i>Frontend</h4>
+                        <ul class="list-unstyled">
+                            @foreach (var tech in Model.FrontendTechnologies)
+                            {
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>@tech</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary"><i class="bi bi-cloud me-2"></i>Cloud & DevOps</h4>
+                        <ul class="list-unstyled">
+                            @foreach (var tech in Model.CloudTechnologies)
+                            {
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>@tech</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-5">Get In Touch</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-item p-4 rounded">
+                            <i class="bi bi-geo-alt-fill h1 text-primary mb-3"></i>
+                            <h5>Location</h5>
+                            <p>Johannesburg, South Africa</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-item p-4 rounded">
+                            <i class="bi bi-envelope-fill h1 text-primary mb-3"></i>
+                            <h5>Email</h5>
+                            <p>macshap04@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-item p-4 rounded">
+                            <i class="bi bi-phone-fill h1 text-primary mb-3"></i>
+                            <h5>Phone</h5>
+                            <p>+27 69 262 9422</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
