@@ -21,7 +21,11 @@ namespace MikePortfolio.Pages
                 "Clean Architecture & SOLID Principles",
                 "Agile / Scrum Delivery",
                 "Code Reviews & Developer Mentorship",
-                "End-to-End Full-Stack Development"
+                "End-to-End Full-Stack Development",
+                "SEO Organic Marketing",
+                "Shopify Ecommerce",
+                "WordPress CMS",
+                "Portal/ Dashboard Development"
             };
 
             // Backend Technologies
